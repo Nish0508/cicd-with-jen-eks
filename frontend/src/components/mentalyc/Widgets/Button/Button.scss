@@ -1,0 +1,35 @@
+
+// button styles
+.mentalyc-modal-button {
+  background: linear-gradient(295.67deg, #de0d6f 16.23%, #731054 83.77%);
+  color: var(--mentalycwhite);
+  font-family: var(--font-family-inter);
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: var(--font-size-s);
+  border-radius: 8px;
+  padding: 0.4em 1em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+
+  // when active
+  &.active-modal-btn {
+    background: linear-gradient(295.67deg, #de0d6f 16.23%, #731054 83.77%);
+ 
+    &:hover {
+      background: var(--main-color-dark);
+      color: var(--mentalycwhite);
+    }
+  }
+
+  // when inactive
+  &.inactive-modal-btn,
+  &.inactive-modal-btn:hover {
+  background: #b2b2b2 
+  }
+
+}

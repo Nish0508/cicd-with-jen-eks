@@ -1,0 +1,29 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import CoreUI styles
+@import "@coreui/coreui-pro/scss/coreui.scss";
+
+// Temp fix for reactstrap
+//@import "~@coreui/coreui-pro/scss/_dropdown-menu-right.scss";
+
+// If you want to add something do it here
+// @import "custom";
+
+// temp fixes
+@import "fixes";
+
+// animations
+@import "./vendors/animations.scss";
+@import "./vendors/_mixins.scss";
+
+// Spinkit
+$spinkit-spinner-color: $body-color;
+@import 'spinkit/scss/spinkit.scss';
+
+// global styles 
+@import "./global.scss";
+
+@import './variables.scss';
+
+

@@ -1,0 +1,79 @@
+@tailwind utilities;
+
+/* custom utilities */
+@layer utilities {
+  .tw-h4,
+  .h4 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .btn-reset {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  .btn,
+  .button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+  }
+
+  .button.fill-default {
+    background: var(--color-gray-100, #ebebeb);
+    color: var(--color-gray-500, var(--mentalyc-gray));
+  }
+
+  .button-block {
+    width: 100%;
+  }
+
+  .btn.fill-primary,
+  .button.fill-primary {
+    border: none;
+    border-radius: 8px;
+    background: var(--color-primary-500);
+    color: white;
+  }
+
+  .btn.primary:disabled {
+    opacity: 0.6;
+  }
+
+  .btn.fill-default {
+    background-color: var(--color-gray-100);
+    color: var(--color-gray-500);
+  }
+
+  .btn-block {
+    width: 100%;
+  }
+
+  .btn.text-primary {
+    background: transparent;
+    color: var(--color-primary-500);
+  }
+
+  .btn.text-default {
+    background: transparent;
+    color: var(--color-gray-500);
+  }
+
+  .primary-gradient {
+    background: linear-gradient(270deg, #de0d6f 0%, #731054 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #de0d6f, #731054);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

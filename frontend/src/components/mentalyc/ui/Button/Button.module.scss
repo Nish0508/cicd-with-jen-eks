@@ -1,0 +1,215 @@
+.btnSpinnerContainer {
+  position: relative;
+  margin-right: 8px;
+}
+
+.btnSpinnerRing {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  border: 3px solid var(--spinner-color, white);
+  opacity: .5;
+}
+
+.btnSpinner {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  border: 3px solid transparent;
+  border-top-color: var(--spinner-color, white);
+  border-radius: 99px;
+  animation: spin .75s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btnFlex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  border: none;
+  font-family: var(--font-family-inter);
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 40px;
+  text-align: center;
+  padding: 0 20px;
+  transition: .25s ease;
+
+  &.block {
+    width: 100%;
+  }
+}
+
+.btnAddon {
+  display: inline-grid;
+  place-items: center;
+}
+
+.btnLeftAddon {
+  margin-right: 8px;
+}
+
+.btnRightAddon {
+  margin-left: 8px;
+}
+
+.button.default {
+  &.outlined {
+    &:disabled {
+      border: 1px solid var(--color-gray-200, #E0E0E0);
+    }
+  }
+}
+
+.button.block {
+  width: 100%;
+}
+
+// w/o variant color 
+.button.striped {
+  transition: none;
+
+  &.filled {
+    background: transparent;
+    color: var(--main-color-dark);
+    border: solid 2px var(--main-color-dark);
+
+    &:hover {
+      background: var(--main-color-dark);
+      color: var(--mentalycwhite);
+    }
+
+    &:disabled {
+      pointer-events: none;
+      background-color: rgba(115, 16, 84, 0.5);
+      color: var(--mentalycwhite);
+      border: transparent;
+    }
+
+  }
+
+  &.outlined {
+    background: var(--mentalycwhite);
+
+    &:hover {
+      background: var(--main-color-dark);
+      color: var(--mentalycwhite);
+    }
+  }
+}
+
+// gradient color
+.button.gradient {
+  transition: none;
+
+  &.filled {
+    background: linear-gradient(295.67deg, #de0d6f 16.23%, #731054 83.77%);
+    color: var(--mentalycwhite);
+
+    &:hover {
+      background: var(--main-color-dark);
+      background-position: 100% 0%;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      background: rgba(115, 16, 84, 0.5);
+    }
+
+  }
+
+  &.outlined {
+    background: var(--mentalycwhite);
+
+    &:hover {
+      background: var(--main-color-dark);
+      color: var(--mentalycwhite);
+    }
+  }
+}
+
+
+// purple color
+.button.purple,
+.button.primary {
+  &.filled {
+    background: #731054;
+    color: var(--mentalycwhite);
+
+    &:hover {
+      opacity: .9;
+    }
+
+    &:disabled {
+      background-color: rgba(115, 16, 84, 0.5);
+    }
+
+  }
+
+  &.outlined {
+    border: 1px solid #731054;
+    color: #731054;
+    background-color: transparent;
+
+    &:disabled {
+      opacity: .5;
+    }
+  }
+
+  &.ghost {
+    --spinner-color: #731054;
+    background-color: transparent;
+    border: none;
+    color: #731054;
+  }
+
+  &.dashed {
+    border: 1px dashed #731054;
+    background: transparent;
+    color: #731054;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--main-color-dark);
+
+  &:hover {
+    background-color: #FEF1FB;
+  }
+
+  &:disabled {
+    background-color: rgba(115, 16, 84, 0.5);
+    background-color: transparent;
+  }
+
+}
+
+.button.danger {
+  background-color: var(--color-danger, #F3404F);
+  color: white;
+
+  &.ghost {
+    background-color: transparent;
+    color: var(--color-danger, #F3404F);
+
+    &:disabled {
+      background: rgba(115, 16, 84, 0.5);
+    }
+  }
+}

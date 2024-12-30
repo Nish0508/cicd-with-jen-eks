@@ -1,0 +1,5 @@
+node_modules/
+build/Release
+.npm
+typings/
+.env

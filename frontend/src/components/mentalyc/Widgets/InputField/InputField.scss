@@ -1,0 +1,88 @@
+// input container styles
+.input__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+
+  &__div {
+    position: relative;
+    display: flex;
+
+    // input styles
+    &__input {
+      padding: 0.5rem 0.5rem;
+      width: 100%;
+      background-color: #f2f2f2;
+      border-radius: 0.5rem;
+      border: 1px solid transparent;
+      font-family: var(--font-family-inter);
+      color: var(--mentalyc-black);
+      font-size: var(--font-size-s);
+      outline: none;
+
+      // effects styles
+      &:hover,
+      &:active,
+      &:focus-visible,
+      &:focus {
+        box-shadow: none;
+        border: 1px solid var(--main-color-dark);
+        color: var(--mentalyc-black);
+        background-color: white;
+      }
+    }
+
+    &__input__icon {
+      width: 16px;
+      height: 16px;
+      margin: auto -2rem;
+      cursor: pointer;
+    }
+
+    .date-input {
+      width: 100% !important;
+      font-size: var(--font-size-s) !important;
+      font-family: var(--font-family-inter) !important;
+      height: 2.5em !important;
+      line-height: 24px !important;
+      color: black !important;
+      outline: none !important;
+      border-radius: 8px !important;
+      border: 1px solid #b2b2b2 !important;
+      cursor: pointer !important;
+    }
+  }
+
+  // label styles
+  &__label {
+    color: var(--mentalyc-black);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    font-family: var(--font-family-inter);
+  }
+
+  &__div__error {
+    color: red;
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    font-weight: 200;
+
+    @media screen and (max-width: 534px) {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.withBorder {
+  border: 1px solid var(--mentalyc-border-color);
+  border-radius: 8px;
+}
+
+.border {
+  border: 1px solid var(--color-gray-100) !important;
+  box-sizing: border-box;
+  border-radius: 8px;
+  outline: none;
+}

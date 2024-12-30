@@ -1,0 +1,296 @@
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: var(--mentalycwhite);
+  height: 100%;
+  width: 100%;
+  overscroll-behavior: none;
+}
+
+
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+
+:root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  --mentalyc-black: #040404;
+  --input-border-size: 0.052vw;
+  --input-border-color: #333333;
+  --input-border-radius: 0.78vw;
+  --placeholder-color: darkgray;
+  --main-color-light: #97126d;
+  --main-color-dark: #731054;
+  --sidebar-bg: #f4f4f4;
+  --medium-red-violet: #ab3c7d;
+  --mentalyc-danger : #F3404F;
+  --mentalyccoal: rgba(51, 51, 51, 1);
+  --mentalycdark-violet: rgba(55, 16, 68, 1);
+  --cornflower-blue: rgba(100, 157, 225, 1);
+  --mentalycmickel: rgba(102, 102, 102, 1);
+  --jordy-blue: rgba(135, 192, 236, 1);
+  --mulberry: rgba(201, 81, 148, 1);
+  --razzmatazz: rgba(222, 13, 111, 0.2);
+  --mentalycmagenta: rgba(222, 13, 111, 1);
+  --concrete: rgba(241, 243, 244, 1);
+  --mentalycsnow: rgba(244, 244, 244, 1);
+  --mentalycwhite: rgba(255, 255, 255, 1);
+  --mentalyc-green : #2ea84e;
+  --mentalyc-green-bg : #cbf4c9;
+  --mentalyc-border-color: #EBEBEB;
+  --mentalyc-gray : #707070;
+  --font-size-xxs: 0.8rem;
+  --font-size-xs: 0.875rem;
+  --font-size-s: 1rem;
+  --font-size-m: 1.125rem;
+  --font-size-l: 1.25rem;
+  --font-size-xl: 1.563rem;
+  --font-size-xxl: 1.875rem;
+  --font-size-xxxl: 2.5rem;
+  --font-family-inter: 'Inter', sans-serif;
+}
+
+@keyframes modalEnter {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modalExit {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--main-color-dark);
+  font-family: var(--font-family-inter);
+  font-style: normal;
+  font-weight: 300;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: var(--input-border-radius);
+  border: var(--input-border-size) solid var(--main-color-dark);
+  box-sizing: border-box;
+  font-family: var(--font-family-inter);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: var(--mentalycwhite);
+  min-width: 5em;
+  min-height: 2.1vw;
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 20px;
+
+  &.primary {
+    background: linear-gradient(295.67deg, #DE0D6F 16.23%, #731054 83.77%);
+    color: var(--mentalycwhite);
+    &:hover {
+      background-color: var(--main-color-dark); 
+    }
+  }
+
+  &:disabled {
+    opacity: 50%;
+    pointer-events: none;
+  }
+}
+
+.input {
+  width: 33vw;
+  height: 2.75vw;
+  background-color: var(--mentalycwhite);
+  border: var(--input-border-size) solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  margin-bottom: 1.35vw;
+  display: flex;
+  justify-content: space-between;
+  input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 92%;
+
+    font-family: var(--font-family-inter);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: var(--placeholder-color);
+      font-style: italic;
+    }
+  }
+  svg {
+    text-align: center;
+    height: 100%;
+    font-size: 1.2vw;
+    margin-left: 0.5vw;
+    position: relative;
+    right: 1px;
+  }
+}
+
+.button {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  letter-spacing: 0px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+// .h3 {
+//   font-family: var(--font-family-inter);
+//   font-size: var(--font-size-xl);
+//   letter-spacing: 0px;
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+// .h1 {
+//   font-family: var(--font-family-inter);
+//   font-size: var(--font-size-xxxl);
+//   letter-spacing: 0px;
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// .h4 {
+//   font-family: var(--font-family-inter);
+//   font-size: var(--font-size-m);
+//   letter-spacing: 0px;
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+
+// .mentalyc-button {
+//   background: linear-gradient(295.67deg, #DE0D6F 16.23%, #731054 83.77%);
+//   color: var(--mentalycwhite);
+//   border-radius: 15px;
+//   white-space: nowrap;
+//   font-family: var(--font-family-inter);
+//   font-style: normal;
+//   font-weight: bold;
+//   text-align: center;
+//   flex-grow: 1;
+//   height: 40px;
+//   border: 1px solid var(--main-color-dark);
+//   max-width: 150px;
+//   cursor: pointer;
+// }
+
+// .mentalyc-button:hover {
+//   text-decoration: none;
+//   background: var(--main-color-dark) !important;
+//   color: var(--mentalycwhite);
+// }
+
+
+.Toastify__toast-container {
+  width: auto;
+  // top: 3.5rem;
+  // margin-left: 2%;
+  // height: 5em;
+  // left: 0;
+  // transform: none;
+  // -webkit-transform: none;
+}
+
+
+// .Toastify__toast-container {
+//   width: 320px;
+// }
+// .Toastify__toast--default {
+//     background: #fff;
+//     color: #aaa;
+//  }
+  
+//   .Toastify__toast--success {
+//     background: #07bc0c;
+//  }
+//   .Toastify__toast--warning {
+//     background: #f1c40f;
+//  }
+
+// .Toastify__toast--info {
+//   width: 97.5% !important;
+// }
+
+// .Toastify__toast--error {
+//   width: 97.5% !important;
+//  }
+
+
+
+.clearfix {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+button:focus,
+[type="submit"]:focus {
+  outline: none;
+}
+
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+
+
+@media (max-height: 700px) {
+  #root {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+        // width: 0;  /* Remove scrollbar space */
+        // background: transparent;  /* Optional: just make scrollbar invisible */
+        display: none;
+    }
+  }
+}

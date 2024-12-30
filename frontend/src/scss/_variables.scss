@@ -1,0 +1,32 @@
+// Variable overrides
+$primary: #97126d !default;
+
+:root {
+  --color-gray-50: #F5F5F5;
+  --color-gray-100: var(--mentalyc-border-color);
+  --color-gray-200: #E0E0E0;
+  --color-gray-300:#C2C2C2;
+  --color-gray-400: #8F8F8F;
+  --color-gray-500: var(--mentalyc-gray);
+  --color-gray-600: #040404;
+
+  --color-white: #fff;
+
+  --color-primary-400: #AB3C7D;
+  --color-primary-400-rgb: 171, 60, 125;
+  --color-primary-500: #731054;
+  --color-primary-500-rgb: 115, 16, 84;
+
+  --color-danger-500: #F3404F;
+
+  --color-secondary-100: #D6E4F4;
+  --color-danger-500: #F3404F;
+  
+  // card
+  --card-bg-color: white;
+  --card-shadow:  none; /* 2px 4px 5px rgba(0, 0, 0, 0.2); */
+  --card-border-style: 1.2px solid var(--color-gray-200);
+  --card-hover-bg-color: #eff1fb;
+}
+
+

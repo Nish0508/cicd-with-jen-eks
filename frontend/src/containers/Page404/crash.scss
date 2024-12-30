@@ -1,0 +1,92 @@
+
+.crash-app-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.crash-page-text {
+  color: var(--mentalyc-black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.crash-page-logo {
+  height: 7em;
+  width: 7em;
+}
+
+.image-page-404{
+  width: 25em;
+  height: 25em;
+}
+
+.image-page-500 {
+  width: 21em;
+  height: 21em;
+}
+
+.image-mobile-blocked {
+  width: 25em;
+  height: 25em;
+}
+
+.crash-page-btn {
+  background: linear-gradient(295.67deg, #DE0D6F 16.23%, #731054 83.77%) !important;
+  color: var(--mentalycwhite);
+  font-size: var(--font-size-l);
+  border-radius: 16px;
+  border: 0px;
+  font-weight: 700;
+  font-family: var(--font-family-inter);
+  padding: 0.5em 2em;
+  margin-top: 2.5em;
+}
+
+.crash-page-btn:hover {
+  background: var(--main-color-dark) !important;
+  color: var(--mentalycwhite);
+}
+
+
+.empty-background {
+  width: 100vw;
+  height: 95vh;
+  background: white;
+}
+
+
+
+
+@media (max-width: 480px), (max-height: 480px) and (orientation: landscape) {
+  .crash-page-btn {
+    font-size: var(--font-size-s);
+    border-radius: 8px;
+    padding: 0.3em 1.5em;
+    margin-top: 0.5em;
+  }
+
+  .crash-page-text {
+    font-size: var(--font-size-s);
+    margin-top: 1em;
+  }
+
+  .crash-page-logo {
+    width: 4em;
+    height: 4em;
+  }
+
+  .image-page-500 {
+    width: 10em;
+    height: 10em;
+  }
+
+  .image-page-404 {
+    width: 12em;
+    height: 12em;
+  }
+}

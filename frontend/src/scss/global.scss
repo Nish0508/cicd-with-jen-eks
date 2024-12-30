@@ -1,0 +1,107 @@
+.mentalyc-confirmation-btn {
+  border: 0px;
+  border-radius: 8px;
+  white-space: nowrap;
+  color: var(--mentalycwhite);
+  padding: 0.5em 1.2em;
+  font-size: var(--font-size-s);
+  font-weight: 700;
+  font-family: var(--font-family-inter);
+  height: 2.5em;
+  margin-top: 1em;
+  text-align: center;
+  background: linear-gradient(295.67deg, #de0d6f 16.23%, #731054 83.77%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.mentalyc-confirmation-btn:hover {
+  background: var(--main-color-dark) !important;
+  color: var(--mentalycwhite);
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+
+  // grays
+  --color-gray-50: #f5f5f5;
+  --color-gray-100: var(--mentalyc-border-color);
+  --color-gray-200: #e0e0e0;
+  --color-gray-400: #8f8f8f;
+  --color-gray-500: var(--mentalyc-gray);
+  --color-gray-600: #040404;
+
+  // primarys
+  --color-primary-500: #731054;
+  --color-primary-500-rgb: 115, 16, 84;
+}
+
+// apply custom scrollbar styles to all elements with a
+// scrollbar
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c2c2c2 #f5f5f5;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    scrollbar-base-color: #f5f5f5;
+    scrollbar-arrow-color: #c2c2c2;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+  border-radius: 16px;
+}
+
+*::-webkit-scrollbar-thumb:horizontal {
+  background-color: #c2c2c2;
+  border-radius: 16px;
+  width: 4px;
+}
+
+.link {
+  text-decoration: underline;
+  color: var(--color-primary-500);
+  font: inherit;
+
+  &:hover {
+    color: var(--color-primary-500);
+    text-decoration: underline;
+  }
+}
+
+.external-link {
+  color: var(--color-primary-500);
+  font: inherit;
+
+  ._label {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: var(--color-primary-500);
+    text-decoration: underline;
+  }
+
+  ._icon {
+    margin-left: 6px;
+  }
+}
+.lines {
+  background-color: var(--color-gray-200);
+  flex: 1;
+  height: 1px;
+  margin-right: 10px;
+}
